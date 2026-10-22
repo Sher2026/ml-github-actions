@@ -46,6 +46,7 @@ if __name__ == "__main__":
     joblib.dump(artifact, "model.pkl")
 
     print("Model training completed successfully.")
+    print("I am Bangladeshi")
     print(f"Test Accuracy: {accuracy:.2%}\n")
     print("Classification Report:")
     print(report)
