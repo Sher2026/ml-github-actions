@@ -7,9 +7,10 @@ from train import train_model
 @pytest.fixture(scope="module")
 def trained_artifacts():
     """Train once and share results across all tests in this file."""
-    model, X_test, y_test, accuracy = train_model()
+    # Unpack all 5 return values
+    artifact, X_test, y_test, accuracy, report = train_model()
     return {
-        "model": model,
+        "model": artifact["model"],
         "X_test": X_test,
         "y_test": y_test,
         "accuracy": accuracy,
